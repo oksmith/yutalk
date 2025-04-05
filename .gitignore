@@ -1,8 +1,13 @@
 # Local notebooks for development purposes only
-notebooks
+examples
 
 # Don't commit my secrets
 .env
 
 # other stuff I don't need
 .DS_Store
+repomix-output.txt
+repomix-output.xml
+*.log
+**/__pycache__/*
+*.egg-info/*
