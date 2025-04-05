@@ -1,2 +1,8 @@
 # Local notebooks for development purposes only
 notebooks
+
+# Don't commit my secrets
+.env
+
+# other stuff I don't need
+.DS_Store
