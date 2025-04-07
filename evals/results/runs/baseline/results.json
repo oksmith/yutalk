@@ -1,0 +1,575 @@
+{
+  "timestamp": "2025-04-07T21:05:29.999606",
+  "config": "evals/config.yaml",
+  "metrics": {
+    "speech_recognition": {
+      "overall": {
+        "wer": 0.0,
+        "cer": 0.0,
+        "transcription_count": 2
+      },
+      "details": [
+        {
+          "filename": "蛋糕.m4a",
+          "reference": "你喜欢吃什么样的蛋糕?",
+          "hypothesis": "你喜欢吃什么样的蛋糕?",
+          "cer": 0.0
+        },
+        {
+          "filename": "蛋糕-错误.m4a",
+          "reference": "你喜欢什么样吃的蛋糕?",
+          "hypothesis": "你喜欢什么样吃的蛋糕?",
+          "cer": 0.0
+        }
+      ]
+    },
+    "grammar_correction": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0,
+      "accuracy": 1.0,
+      "total_cases": 15,
+      "correct_cases": 15,
+      "categories": {
+        "word_order": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1_score": 0.0,
+          "accuracy": 1.0,
+          "total_cases": 2,
+          "correct_cases": 2
+        },
+        "measure_word": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1_score": 0.0,
+          "accuracy": 1.0,
+          "total_cases": 2,
+          "correct_cases": 2
+        },
+        "particle": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1_score": 0.0,
+          "accuracy": 1.0,
+          "total_cases": 2,
+          "correct_cases": 2
+        },
+        "verb_complement": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1_score": 0.0,
+          "accuracy": 1.0,
+          "total_cases": 1,
+          "correct_cases": 1
+        },
+        "correct": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1_score": 0.0,
+          "accuracy": 1.0,
+          "total_cases": 3,
+          "correct_cases": 3
+        },
+        "aspect_marker": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1_score": 0.0,
+          "accuracy": 1.0,
+          "total_cases": 1,
+          "correct_cases": 1
+        },
+        "preposition": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1_score": 0.0,
+          "accuracy": 1.0,
+          "total_cases": 2,
+          "correct_cases": 2
+        },
+        "comparison": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1_score": 0.0,
+          "accuracy": 1.0,
+          "total_cases": 2,
+          "correct_cases": 2
+        }
+      },
+      "details": [
+        {
+          "category": "word_order",
+          "text": "我每天吃饭三次。",
+          "expected_has_errors": true,
+          "detected_has_errors": true,
+          "correct": true,
+          "true_positives": 1,
+          "false_positives": 0,
+          "false_negatives": 0,
+          "corrections": [
+            {
+              "explanation": "句子“我每天吃饭三次”语序错误。正确应为：“我每天吃三次饭。” 原因：表示动作频率时，结构应为：主语 + 时间 + 动词 + 次数 + 宾语。在这个句子中，“吃饭”作为一个动词短语，应该将“饭”放在最后，以符合汉语的习惯用法。"
+            }
+          ]
+        },
+        {
+          "category": "word_order",
+          "text": "我喜欢非常中国菜。",
+          "expected_has_errors": true,
+          "detected_has_errors": true,
+          "correct": true,
+          "true_positives": 1,
+          "false_positives": 0,
+          "false_negatives": 0,
+          "corrections": [
+            {
+              "explanation": "句子“我喜欢非常中国菜”用词不当。正确应为：“我非常喜欢中国菜。” 原因：在中文中，副词“非常”应放在动词“喜欢”之前，而不是形容词“中国菜”之前。结构应为：主语 + 副词 + 动词 + 宾语。"
+            }
+          ]
+        },
+        {
+          "category": "measure_word",
+          "text": "我买了三书。",
+          "expected_has_errors": true,
+          "detected_has_errors": true,
+          "correct": true,
+          "true_positives": 1,
+          "false_positives": 0,
+          "false_negatives": 0,
+          "corrections": [
+            {
+              "explanation": "句子“我买了三书”用词不当。正确应为：“我买了三本书。” 原因：“书”是一个可数名词，在中文中表示数量时，需要使用量词“本”。量词通常在数字和名词之间使用，以便更准确地表达数量。"
+            }
+          ]
+        },
+        {
+          "category": "measure_word",
+          "text": "桌子上有两个笔。",
+          "expected_has_errors": true,
+          "detected_has_errors": true,
+          "correct": true,
+          "true_positives": 1,
+          "false_positives": 0,
+          "false_negatives": 0,
+          "corrections": [
+            {
+              "explanation": "句子“桌子上有两个笔”用词不当。正确应为：“桌子上有两支笔。” 原因：在中文中，\"笔\"是一个可数名词，通常需要与量词搭配使用。这里的“两个”应该改为“两支”，因为“支”是笔的量词。量词在中文中是非常重要的，它帮助我们准确地表达数量和类别。"
+            }
+          ]
+        },
+        {
+          "category": "particle",
+          "text": "我去图书馆学习的。",
+          "expected_has_errors": true,
+          "detected_has_errors": true,
+          "correct": true,
+          "true_positives": 1,
+          "false_positives": 0,
+          "false_negatives": 0,
+          "corrections": [
+            {
+              "explanation": "句子“我去图书馆学习的”有语法错误。正确应为：“我去图书馆学习。” 原因：在这个句子中，“的”字的使用不合适，因为“的”通常用于表示定语或补充说明，而这里的句子是一个完整的叙述句，不需要“的”来结束。 \n\n解释：在中文中，表示一个动作时，通常直接使用动词和宾语的结构，避免不必要的助词。"
+            }
+          ]
+        },
+        {
+          "category": "particle",
+          "text": "那是我的朋友的车。",
+          "expected_has_errors": false,
+          "detected_has_errors": false,
+          "correct": true,
+          "true_positives": 0,
+          "false_positives": 0,
+          "false_negatives": 0,
+          "corrections": null
+        },
+        {
+          "category": "verb_complement",
+          "text": "我学中文学三年了。",
+          "expected_has_errors": true,
+          "detected_has_errors": true,
+          "correct": true,
+          "true_positives": 1,
+          "false_positives": 0,
+          "false_negatives": 0,
+          "corrections": [
+            {
+              "explanation": "句子“我学中文学三年了”有重复的动词使用。正确应为：“我学中文已经三年了。” 原因：在表达学习的时间时，通常使用“已经”来表示时间的持续，而不需要重复动词“学”。 \n\n解释：在中文中，当我们想要表达某个动作持续了多长时间时，通常会用“已经”来引入时间的概念，而不是重复动词。"
+            }
+          ]
+        },
+        {
+          "category": "correct",
+          "text": "我每天吃三次饭。",
+          "expected_has_errors": false,
+          "detected_has_errors": false,
+          "correct": true,
+          "true_positives": 0,
+          "false_positives": 0,
+          "false_negatives": 0,
+          "corrections": null
+        },
+        {
+          "category": "correct",
+          "text": "我非常喜欢中国菜。",
+          "expected_has_errors": false,
+          "detected_has_errors": false,
+          "correct": true,
+          "true_positives": 0,
+          "false_positives": 0,
+          "false_negatives": 0,
+          "corrections": null
+        },
+        {
+          "category": "correct",
+          "text": "我买了三本书。",
+          "expected_has_errors": false,
+          "detected_has_errors": false,
+          "correct": true,
+          "true_positives": 0,
+          "false_positives": 0,
+          "false_negatives": 0,
+          "corrections": null
+        },
+        {
+          "category": "aspect_marker",
+          "text": "我吃饭了三个小时。",
+          "expected_has_errors": true,
+          "detected_has_errors": true,
+          "correct": true,
+          "true_positives": 1,
+          "false_positives": 0,
+          "false_negatives": 0,
+          "corrections": [
+            {
+              "explanation": "句子“我吃饭了三个小时”有些不自然。正确应为：“我吃了三个小时的饭。” 原因：在中文中，表示时间的长度时，通常需要在“吃”之后加上“的”，以形成一个完整的时间状语结构。这样可以更清楚地表达出吃饭的时间长度。"
+            }
+          ]
+        },
+        {
+          "category": "preposition",
+          "text": "我在商店买东西。",
+          "expected_has_errors": false,
+          "detected_has_errors": false,
+          "correct": true,
+          "true_positives": 0,
+          "false_positives": 0,
+          "false_negatives": 0,
+          "corrections": null
+        },
+        {
+          "category": "preposition",
+          "text": "我去北京坐火车。",
+          "expected_has_errors": true,
+          "detected_has_errors": true,
+          "correct": true,
+          "true_positives": 1,
+          "false_positives": 0,
+          "false_negatives": 0,
+          "corrections": [
+            {
+              "explanation": "句子“我去北京坐火车”有些不自然。正确应为：“我坐火车去北京。” 原因：在中文中，通常将动词“坐”放在前面，以强调交通方式，后面再接目的地。这样更符合中文的表达习惯。"
+            }
+          ]
+        },
+        {
+          "category": "comparison",
+          "text": "我比他高。",
+          "expected_has_errors": false,
+          "detected_has_errors": false,
+          "correct": true,
+          "true_positives": 0,
+          "false_positives": 0,
+          "false_negatives": 0,
+          "corrections": null
+        },
+        {
+          "category": "comparison",
+          "text": "我高比他。",
+          "expected_has_errors": true,
+          "detected_has_errors": true,
+          "correct": true,
+          "true_positives": 1,
+          "false_positives": 0,
+          "false_negatives": 0,
+          "corrections": [
+            {
+              "explanation": "句子“我高比他”语法错误。正确应为：“我比他高。” 原因：在比较句中，正确的结构应为“主语 + 比 + 其他人 + 形容词”，即先说出比较的对象，再描述比较的性质。"
+            }
+          ]
+        }
+      ]
+    },
+    "conversation": {
+      "overall": {
+        "coherence": 5.0,
+        "relevance": 5.0,
+        "engagement": 5.0,
+        "language_level": 4.3,
+        "pedagogical_value": 4.6
+      },
+      "test_cases": [
+        {
+          "user_message": "你好！我叫大卫。",
+          "assistant_response": "你好，大卫！很高兴认识你。你今天过得怎么样？",
+          "evaluation": {
+            "coherence": {
+              "score": 5,
+              "explanation": "The assistant's response logically follows the learner's introduction by acknowledging their name and expressing pleasure in meeting them."
+            },
+            "relevance": {
+              "score": 5,
+              "explanation": "The assistant's response is highly relevant as it directly addresses the learner's greeting and introduces a follow-up question."
+            },
+            "engagement": {
+              "score": 5,
+              "explanation": "The assistant's question about the learner's day encourages further conversation and invites the learner to share more."
+            },
+            "language_level": {
+              "score": 5,
+              "explanation": "The language used by the assistant is appropriate for a beginner level, with simple and clear structures."
+            },
+            "pedagogical_value": {
+              "score": 5,
+              "explanation": "The exchange reinforces basic conversational phrases and encourages the learner to practice speaking about their experiences."
+            }
+          }
+        },
+        {
+          "user_message": "最近怎么样？",
+          "assistant_response": "我很好，谢谢！你最近怎么样？有没有什么有趣的事情发生？",
+          "evaluation": {
+            "coherence": {
+              "score": 5,
+              "explanation": "The assistant's response logically follows the learner's greeting and inquiry about their well-being."
+            },
+            "relevance": {
+              "score": 5,
+              "explanation": "The assistant's response is directly relevant to the learner's question about how they are doing."
+            },
+            "engagement": {
+              "score": 5,
+              "explanation": "The assistant's follow-up question encourages the learner to share more, promoting engagement."
+            },
+            "language_level": {
+              "score": 5,
+              "explanation": "The language used is appropriate for a learner, with clear and simple structures."
+            },
+            "pedagogical_value": {
+              "score": 5,
+              "explanation": "The exchange provides a practical example of conversational Chinese, reinforcing social language skills."
+            }
+          }
+        },
+        {
+          "user_message": "我喜欢打篮球，你呢？",
+          "assistant_response": "我也喜欢打篮球！打篮球很有趣，可以锻炼身体。你通常和朋友一起打吗？",
+          "evaluation": {
+            "coherence": {
+              "score": 5,
+              "explanation": "The assistant's response logically follows the learner's statement about liking basketball."
+            },
+            "relevance": {
+              "score": 5,
+              "explanation": "The assistant's response is highly relevant, as it directly relates to the topic of basketball."
+            },
+            "engagement": {
+              "score": 5,
+              "explanation": "The assistant's question encourages the learner to continue the conversation, promoting engagement."
+            },
+            "language_level": {
+              "score": 4,
+              "explanation": "The language used is appropriate for a learner, with clear sentences and vocabulary that is accessible."
+            },
+            "pedagogical_value": {
+              "score": 4,
+              "explanation": "The response reinforces conversational structures and encourages the learner to practice speaking about their interests."
+            }
+          }
+        },
+        {
+          "user_message": "你觉得学习中文最难的部分是什么？",
+          "assistant_response": "我觉得学习中文最难的部分可能是声调，因为同一个拼音在不同的声调下意思完全不同。你觉得呢？在学习中文的过程中，有没有遇到什么特别困难的地方？",
+          "evaluation": {
+            "coherence": {
+              "score": 5,
+              "explanation": "The assistant's response logically follows the learner's question about the difficulties of learning Chinese."
+            },
+            "relevance": {
+              "score": 5,
+              "explanation": "The assistant directly addresses the learner's inquiry about the hardest part of learning Chinese."
+            },
+            "engagement": {
+              "score": 5,
+              "explanation": "The assistant encourages further dialogue by asking the learner about their own experiences, which promotes engagement."
+            },
+            "language_level": {
+              "score": 4,
+              "explanation": "The language used is appropriate for a learner, with clear explanations and vocabulary that is accessible."
+            },
+            "pedagogical_value": {
+              "score": 5,
+              "explanation": "The assistant highlights an important aspect of Chinese language learning (tones) and invites the learner to reflect on their challenges."
+            }
+          }
+        },
+        {
+          "user_message": "你会做中国菜吗？",
+          "assistant_response": "我会做一些简单的中国菜，比如炒饭和饺子。你喜欢吃什么中国菜呢？",
+          "evaluation": {
+            "coherence": {
+              "score": 5,
+              "explanation": "The assistant's response logically follows the learner's question about cooking Chinese food."
+            },
+            "relevance": {
+              "score": 5,
+              "explanation": "The assistant provides relevant information about the types of Chinese dishes it can make."
+            },
+            "engagement": {
+              "score": 5,
+              "explanation": "The assistant encourages further conversation by asking the learner about their favorite Chinese dishes."
+            },
+            "language_level": {
+              "score": 4,
+              "explanation": "The language used is appropriate for a learner, with simple structures and vocabulary."
+            },
+            "pedagogical_value": {
+              "score": 4,
+              "explanation": "The exchange introduces vocabulary related to food and cooking, which is useful for language learning."
+            }
+          }
+        },
+        {
+          "user_message": "我昨天尝试了做饺子，但是很难包。",
+          "assistant_response": "包饺子确实有点难，但也是很有趣的活动！你是用什么馅儿呢？下次可以试试和朋友一起做，这样会更简单一些。",
+          "evaluation": {
+            "coherence": {
+              "score": 5,
+              "explanation": "The assistant's response logically follows the learner's message about making dumplings and acknowledges the difficulty."
+            },
+            "relevance": {
+              "score": 5,
+              "explanation": "The assistant directly addresses the learner's experience with making dumplings and asks a relevant follow-up question."
+            },
+            "engagement": {
+              "score": 5,
+              "explanation": "The response invites further discussion by asking about the filling and suggesting making dumplings with friends, which encourages the learner to share more."
+            },
+            "language_level": {
+              "score": 4,
+              "explanation": "The language used is appropriate for a learner, with clear and simple structures, though it may include some slightly advanced vocabulary."
+            },
+            "pedagogical_value": {
+              "score": 5,
+              "explanation": "The assistant reinforces cultural aspects of cooking and collaboration while providing a context for language use, enhancing the learning experience."
+            }
+          }
+        },
+        {
+          "user_message": "我想去中国旅游，你有什么建议？",
+          "assistant_response": "哇，去中国旅游真不错！你想去哪个城市呢？如果你喜欢美食，推荐你去成都，那里有很多好吃的川菜。",
+          "evaluation": {
+            "coherence": {
+              "score": 5,
+              "explanation": "The assistant's response logically follows the learner's message by expressing enthusiasm and asking a relevant question about the travel destination."
+            },
+            "relevance": {
+              "score": 5,
+              "explanation": "The assistant's suggestions about traveling to China and recommending Chengdu for its cuisine are directly relevant to the user's request for travel advice."
+            },
+            "engagement": {
+              "score": 5,
+              "explanation": "The assistant's question about which city the learner is interested in encourages further conversation and keeps the dialogue flowing."
+            },
+            "language_level": {
+              "score": 4,
+              "explanation": "The language used is appropriate for a learner, with clear and simple structures, though it may include some colloquial expressions."
+            },
+            "pedagogical_value": {
+              "score": 4,
+              "explanation": "The assistant introduces cultural elements (food) which can enhance the learner's understanding of Chinese culture while providing practical travel advice."
+            }
+          }
+        },
+        {
+          "user_message": "我每天早上六点起床，然后去跑步。",
+          "assistant_response": "真不错！早上跑步很健康。你喜欢在什么地方跑步呢？",
+          "evaluation": {
+            "coherence": {
+              "score": 5,
+              "explanation": "The assistant's response logically follows the learner's statement about their morning routine."
+            },
+            "relevance": {
+              "score": 5,
+              "explanation": "The assistant's response is highly relevant as it acknowledges the learner's activity and asks a related question."
+            },
+            "engagement": {
+              "score": 5,
+              "explanation": "The assistant's question invites further discussion, making the conversation more engaging."
+            },
+            "language_level": {
+              "score": 5,
+              "explanation": "The language used by the assistant is appropriate for the learner's level, using simple and clear structures."
+            },
+            "pedagogical_value": {
+              "score": 4,
+              "explanation": "The exchange encourages the learner to practice more conversational skills by discussing their running habits."
+            }
+          }
+        },
+        {
+          "user_message": "我正在学习汉字，但是很难记住。",
+          "assistant_response": "学习汉字确实有点困难，但你可以试试用一些记忆法，比如把汉字拆分成部件，或者用图像记忆。你最喜欢的汉字是什么？为什么？",
+          "evaluation": {
+            "coherence": {
+              "score": 5,
+              "explanation": "The assistant's response logically follows from the learner's message about the difficulty of learning Chinese characters."
+            },
+            "relevance": {
+              "score": 5,
+              "explanation": "The assistant provides relevant strategies for memorizing Chinese characters, directly addressing the learner's concern."
+            },
+            "engagement": {
+              "score": 5,
+              "explanation": "The assistant's question about the learner's favorite character invites further discussion and keeps the conversation going."
+            },
+            "language_level": {
+              "score": 4,
+              "explanation": "The language used is mostly appropriate for a learner, though some terms like '部件' might require prior knowledge."
+            },
+            "pedagogical_value": {
+              "score": 5,
+              "explanation": "The assistant introduces effective memorization techniques, which are valuable for the learner's progress."
+            }
+          }
+        },
+        {
+          "user_message": "今天天气很好，我想去公园。",
+          "assistant_response": "今天天气好，真是个出去玩的好机会！你喜欢在公园做什么呢？散步、跑步还是野餐？",
+          "evaluation": {
+            "coherence": {
+              "score": 5,
+              "explanation": "The assistant's response logically follows the user's statement about the nice weather and expresses enthusiasm about going outside."
+            },
+            "relevance": {
+              "score": 5,
+              "explanation": "The assistant's response is directly relevant to the user's message about wanting to go to the park due to the good weather."
+            },
+            "engagement": {
+              "score": 5,
+              "explanation": "The assistant's question about the user's activities in the park encourages further conversation and engagement."
+            },
+            "language_level": {
+              "score": 4,
+              "explanation": "The language used is appropriate for a learner, with simple structures and vocabulary that are accessible."
+            },
+            "pedagogical_value": {
+              "score": 5,
+              "explanation": "The assistant not only reinforces vocabulary related to weather and outdoor activities but also prompts the user to practice their speaking skills."
+            }
+          }
+        }
+      ]
+    }
+  }
+}

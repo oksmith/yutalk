@@ -1,0 +1,8 @@
+test_cases:
+  - audio_file: 蛋糕.m4a
+    transcript: 你喜欢吃什么样的蛋糕?
+    description: "Basic question"
+    
+  - audio_file: 蛋糕-错误.m4a
+    transcript: 你喜欢什么样吃的蛋糕?
+    description: "Basic question with incorrect grammar"

@@ -1,0 +1,24 @@
+# This file controls which evaluations are run and their parameters
+
+# Speech recognition evaluation settings
+speech_recognition:
+  enabled: true
+  audio_dir: "evals/data/audio"
+  reference_file: "evals/data/audio_transcripts.yaml"
+
+# Grammar correction evaluation settings
+grammar_correction:
+  enabled: true
+  test_cases_file: "evals/data/grammar_cases.yaml"
+
+# Conversation quality evaluation settings
+conversation:
+  enabled: true
+  test_cases_file: "evals/data/conversation_cases.yaml"
+  model_name: "gpt-4o-mini"  # Model to use for conversation evaluation
+  metrics:
+    - coherence
+    - relevance
+    - engagement
+    - language_level
+    - pedagogical_value

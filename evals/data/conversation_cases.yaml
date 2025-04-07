@@ -1,0 +1,38 @@
+# Sample conversation test cases for evaluation
+test_cases:
+  # Basic greetings
+  - user_message: 你好！我叫大卫。
+    description: "Basic greeting and self-introduction"
+  
+  - user_message: 最近怎么样？
+    description: "Casual greeting asking how things are"
+  
+  # Questions about hobbies
+  - user_message: 我喜欢打篮球，你呢？
+    description: "Sharing a hobby and asking the assistant"
+  
+  - user_message: 你觉得学习中文最难的部分是什么？
+    description: "Asking for opinion about learning Chinese"
+  
+  # Food-related conversations
+  - user_message: 你会做中国菜吗？
+    description: "Simple question about cooking skills"
+  
+  - user_message: 我昨天尝试了做饺子，但是很难包。
+    description: "Sharing experience with making dumplings"
+  
+  # Travel
+  - user_message: 我想去中国旅游，你有什么建议？
+    description: "Asking for travel recommendations"
+  
+  # Daily life
+  - user_message: 我每天早上六点起床，然后去跑步。
+    description: "Describing morning routine"
+  
+  # Study related
+  - user_message: 我正在学习汉字，但是很难记住。
+    description: "Expressing difficulty with learning characters"
+  
+  # Weather
+  - user_message: 今天天气很好，我想去公园。
+    description: "Commenting on weather and plans"

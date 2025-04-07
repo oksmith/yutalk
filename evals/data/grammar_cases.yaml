@@ -1,0 +1,117 @@
+# Sample grammar test cases for evaluation
+test_cases:
+  # Word order errors
+  - category: word_order
+    text: 我每天吃饭三次。
+    expected_result:
+      has_errors: true
+      errors:
+        - type: word_order
+          description: "Frequency should be placed before the object"
+  
+  - category: word_order
+    text: 我喜欢非常中国菜。
+    expected_result:
+      has_errors: true
+      errors:
+        - type: word_order
+          description: "Adverb 非常 should be placed before the verb"
+  
+  # Measure word errors
+  - category: measure_word
+    text: 我买了三书。
+    expected_result:
+      has_errors: true
+      errors:
+        - type: measure_word
+          description: "Missing measure word between number and noun"
+  
+  - category: measure_word
+    text: 桌子上有两个笔。
+    expected_result:
+      has_errors: true
+      errors:
+        - type: measure_word
+          description: "Wrong measure word for 笔"
+  
+  # Particle usage errors
+  - category: particle
+    text: 我去图书馆学习的。
+    expected_result:
+      has_errors: true
+      errors:
+        - type: particle
+          description: "Incorrect use of the particle 的"
+  
+  - category: particle
+    text: 那是我的朋友的车。
+    expected_result:
+      has_errors: false
+      errors: []
+  
+  # Verb complement errors
+  - category: verb_complement
+    text: 我学中文学三年了。
+    expected_result:
+      has_errors: true
+      errors:
+        - type: verb_complement
+          description: "Missing 了 after verb or incorrect verb repetition"
+  
+  # Correct sentences
+  - category: correct
+    text: 我每天吃三次饭。
+    expected_result:
+      has_errors: false
+      errors: []
+  
+  - category: correct
+    text: 我非常喜欢中国菜。
+    expected_result:
+      has_errors: false
+      errors: []
+  
+  - category: correct
+    text: 我买了三本书。
+    expected_result:
+      has_errors: false
+      errors: []
+  
+  # Aspect marker errors
+  - category: aspect_marker
+    text: 我吃饭了三个小时。
+    expected_result:
+      has_errors: true
+      errors:
+        - type: aspect_marker
+          description: "Incorrect use of 了 with time duration"
+  
+  # Preposition errors
+  - category: preposition
+    text: 我在商店买东西。
+    expected_result:
+      has_errors: false
+      errors: []
+  
+  - category: preposition
+    text: 我去北京坐火车。
+    expected_result:
+      has_errors: true
+      errors:
+        - type: preposition
+          description: "Missing preposition 'by' (坐/乘)"
+  
+  # Comparison errors
+  - category: comparison
+    text: 我比他高。
+    expected_result:
+      has_errors: false
+      errors: []
+  
+  - category: comparison
+    text: 我高比他。
+    expected_result:
+      has_errors: true
+      errors:
+        - type: comparison
+          description: "Incorrect word order in comparison"
